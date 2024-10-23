@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "mi-fuente";
+    src: url(src/HelveticaNeue-Thin.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "mi-fuente";
+    background: #0c192c;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.tarjeta {
+    margin: auto;
+    width: 300px;
+    height: 500px;
+    transform: translateY(90px);
+    border-radius: 20px;
+    background-color: #262626;
+    min-height: 300px;
+    max-width: 300px;
+    z-index: 10;
+    position: relative;
+}
+
+.tarjeta span {
+    justify-content: center;
+    display: flex;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.logo {
+    margin: auto;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.logo video {
+    border-radius: 50%;
+    min-width: 200px;
+    max-width: 200px;
+
+}
+
+.icono {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icono div>img {
+    height: 20px;
+    width: 20px;
+    margin-top: 7px;
+}
+
+.icono div {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.icono div>p {
+    margin-top: 10px;
+}
+
+.icono .div1 {
+    background-color: #ff92926c;
+    color: white;
+}
+
+.icono .div1:hover {
+    background-color: #ff9292e5;
+}
+
+.icono .div2 {
+    background-color: #b69bfd;
+    color: white;
+}
+
+.icono .div2:hover {
+    background-color: rgba(72, 64, 94, 0.69);
+}
+
+.tarjeta article {
+    padding: 10px;
+    transform: translateY(30px);
+    text-align: center;
+    color: white;
+    line-height: 1.4rem;
+}
+
+
+.container {
+    margin-top: -80vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
